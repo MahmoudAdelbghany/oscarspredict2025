@@ -337,8 +337,9 @@
         // Download the prediction card 
         function downloadCard() {
             const outputElement = document.getElementById('output');
-
+            document.querySelectorAll('#output button').forEach(button => button.style.display = 'none');
             html2canvas(outputElement).then(canvas => {
+                document.querySelectorAll('#output button').forEach(button => button.style.display = '');
                 const link = document.createElement('a');
                 link.download = 'Oscar2025_Predictions.png';
                 link.href = canvas.toDataURL();

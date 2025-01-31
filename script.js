@@ -1,26 +1,26 @@
 const nominees = {
     actor: [
-        "Adrien Brody: The Brutalist",
-        "Timothée Chalamet: A Complete Unknown",
-        "Colman Domingo: Sing Sing",
-        "Ralph Fiennes: Conclave",
-        "Sebastian Stan: The Apprentice"
-        ],
+        "Adrien Brody : The Brutalist",
+        "Timothée Chalamet : A Complete Unknown",
+        "Colman Domingo : Sing Sing",
+        "Ralph Fiennes : Conclave",
+        "Sebastian Stan : The Apprentice"
+    ],
     actress: [
-        "Cynthia Erivo: Wicked",
-        "Karla Sofía Gascón: Emilia Pérez",
-        "Mikey Madison: Anora",
-        "Demi Moore: The Substance",
-        "Fernanda Torres: I'm Still Here"
-        ],
-    director:[
-        "Sean Baker: Anora",
-        "Brady Corbet: The Brutalist",
-        "James Mangold: A Complete Unknown",
-        "Jacques Audiard: Emilia Pérez",
-        "Coralie Fargeat: The Substance"
-        ],
-        picture: [
+        "Cynthia Erivo : Wicked",
+        "Karla Sofía Gascón : Emilia Pérez",
+        "Mikey Madison : Anora",
+        "Demi Moore : The Substance",
+        "Fernanda Torres : I'm Still Here"
+    ],
+    director: [
+        "Sean Baker : Anora",
+        "Brady Corbet : The Brutalist",
+        "James Mangold : A Complete Unknown",
+        "Jacques Audiard : Emilia Pérez",
+        "Coralie Fargeat : The Substance"
+    ],
+    picture: [
         "Anora",
         "The Brutalist",
         "A Complete Unknown",
@@ -34,39 +34,39 @@ const nominees = {
     ],
     other: {
         "Actor in a Supporting Role": [
-            "Yura Borisov: Anora",
-            "Kieran Culkin: A Real Pain",
-            "Edward Norton: A Complete Unknown",
-            "Guy Pearce: The Brutalist",
-            "Jeremy Strong: The Apprentice"
-    ],
+            "Yura Borisov : Anora",
+            "Kieran Culkin : A Real Pain",
+            "Edward Norton : A Complete Unknown",
+            "Guy Pearce : The Brutalist",
+            "Jeremy Strong : The Apprentice"
+        ],
         "Actress in a Supporting Role": [
-            "Monica Barbaro: A Complete Unknown",
-            "Ariana Grande: Wicked",
-            "Felicity Jones: The Brutalist",
-            "Isabella Rossellini: Conclave",
-            "Zoe Saldaña: Emilia Pérez"
-    ],
+            "Monica Barbaro : A Complete Unknown",
+            "Ariana Grande : Wicked",
+            "Felicity Jones : The Brutalist",
+            "Isabella Rossellini : Conclave",
+            "Zoe Saldaña : Emilia Pérez"
+        ],
         "Cinematography": [
-            "Lol Crawley - The Brutalist",
-            "Greig Fraser - Dune: Part Two",
-            "Paul Guilhaume - Emilia Pérez",
-            "Ed Lachman - Maria",
-            "Jarin Blaschke - Nosferatu"
+            "Lol Crawley : The Brutalist",
+            "Greig Fraser : Dune: Part Two",
+            "Paul Guilhaume : Emilia Pérez",
+            "Ed Lachman : Maria",
+            "Jarin Blaschke : Nosferatu"
         ],
         "Costume Design": [
-            "Arianne Phillips - A Complete Unknown",
-            "Lisy Christl - Conclave",
-            "Janty Yates, Dave Crossman - Gladiator II",
-            "Linda Muir - Nosferatu",
-            "Paul Tazewell - Wicked"
+            "Arianne Phillips : A Complete Unknown",
+            "Lisy Christl : Conclave",
+            "Janty Yates, Dave Crossman : Gladiator II",
+            "Linda Muir : Nosferatu",
+            "Paul Tazewell : Wicked"
         ],
         "Film Editing": [
-            "Sean Baker - Anora",
-            "David Jancso - The Brutalist",
-            "Nick Emerson - Conclave",
-            "Juliette Welfling - Emilia Pérez",
-            "Myron Kerstein - Wicked"
+            "Sean Baker : Anora",
+            "David Jancso : The Brutalist",
+            "Nick Emerson : Conclave",
+            "Juliette Welfling : Emilia Pérez",
+            "Myron Kerstein : Wicked"
         ],
         "International Feature": [
             "Brazil: I'm Still Here",
@@ -76,25 +76,25 @@ const nominees = {
             "Latvia: Flow"
         ],
         "Music (Original Score)": [
-            "Daniel Blumberg - The Brutalist",
-            "Volker Bertelmann - Conclave",
-            "Clément Ducol, Camille - Emilia Pérez",
-            "John Powell, Stephen Schwartz - Wicked",
-            "Kris Bowers - The Wild Robot"
+            "Daniel Blumberg : The Brutalist",
+            "Volker Bertelmann : Conclave",
+            "Clément Ducol, Camille : Emilia Pérez",
+            "John Powell, Stephen Schwartz : Wicked",
+            "Kris Bowers : The Wild Robot"
         ],
         "Music (Original Song)": [
-            "El Mal - Emilia Pérez",
-            "The Journey - The Six Triple Eight",
-            "Like A Bird - Sing Sing",
-            "Mi Camino - Emilia Pérez",
-            "Never Too Late - Elton John: Never Too Late"
+            "El Mal : Emilia Pérez",
+            "The Journey : The Six Triple Eight",
+            "Like A Bird : Sing Sing",
+            "Mi Camino : Emilia Pérez",
+            "Never Too Late : Elton John: Never Too Late"
         ],
         "Production Design": [
-            "Judy Becker, Patricia Cuccia - The Brutalist",
-            "Suzie Davies, Cynthia Sleiter - Conclave",
-            "Patrice Vermette, Shane Vieau - Dune: Part Two",
-            "Craig Lathrop, Beatrice Brentnerová - Nosferatu",
-            "Nathan Crowley, Lee Sandales - Wicked"
+            "Judy Becker, Patricia Cuccia : The Brutalist",
+            "Suzie Davies, Cynthia Sleiter : Conclave",
+            "Patrice Vermette, Shane Vieau : Dune: Part Two",
+            "Craig Lathrop, Beatrice Brentnerová : Nosferatu",
+            "Nathan Crowley, Lee Sandales : Wicked"
         ],
         "Sound": [
             "A Complete Unknown",
@@ -111,245 +111,251 @@ const nominees = {
             "Wicked"
         ],
         "Writing (Adapted Screenplay)": [
-            "James Mangold, Jay Cocks - A Complete Unknown",
-            "Peter Straughan - Conclave",
-            "Jacques Audiard & team - Emilia Pérez",
-            "RaMell Ross & Joslyn Barnes - Nickel Boys",
-            "Clint Bentley & team - Sing Sing"
+            "James Mangold, Jay Cocks : A Complete Unknown",
+            "Peter Straughan : Conclave",
+            "Jacques Audiard & team : Emilia Pérez",
+            "RaMell Ross & Joslyn Barnes : Nickel Boys",
+            "Clint Bentley & team : Sing Sing"
         ],
         "Writing (Original Screenplay)": [
-            "Sean Baker - Anora",
-            "Brady Corbet & Mona Fastvold - The Brutalist",
-            "Jesse Eisenberg - A Real Pain",
-            "Moritz Binder & Tim Fehlbaum - September 5",
-            "Coralie Fargeat - The Substance"
+            "Sean Baker : Anora",
+            "Brady Corbet & Mona Fastvold : The Brutalist",
+            "Jesse Eisenberg : A Real Pain",
+            "Moritz Binder & Tim Fehlbaum : September 5",
+            "Coralie Fargeat : The Substance"
         ]
     }
 };
 
-        // Initialize main categories
-        function initializeCategories() {
-            ['actor', 'actress', 'director', 'picture'].forEach(category => {
-                const select = document.getElementById(category);
-                nominees[category].forEach(nominee => {
-                    const option = document.createElement('option');
-                    option.textContent = nominee;
-                    option.value = nominee;
-                    select.appendChild(option);
-                });
-            });
-        }
+// Initialize main categories
+function initializeCategories() {
+    ['actor', 'actress', 'director', 'picture'].forEach(category => {
+        const select = document.getElementById(category);
+        nominees[category].forEach(nominee => {
+            const option = document.createElement('option');
+            option.textContent = nominee;
+            option.value = nominee;
+            select.appendChild(option);
+        });
+    });
+}
 
-        // Add additional category dropdowns
-        function addCategory() {
-            const container = document.getElementById('additionalCategories');
+// Add additional category dropdowns
+function addCategory() {
+    const container = document.getElementById('additionalCategories');
 
-            // Create a wrapper div
-            const categoryGroupDiv = document.createElement('div');
-            categoryGroupDiv.className = 'category-group';
+    // Create a wrapper div
+    const categoryGroupDiv = document.createElement('div');
+    categoryGroupDiv.className = 'category-group';
 
-            // Create category select
-            const categorySelect = document.createElement('select');
-            categorySelect.className = 'category-select';
-            categorySelect.required = true;
+    // Create category select
+    const categorySelect = document.createElement('select');
+    categorySelect.className = 'category-select';
+    categorySelect.required = true;
 
-            // Add accessible name using a label
-            const categoryLabel = document.createElement('label');
-            categoryLabel.textContent = 'Select Category';
-            categoryLabel.style.display = 'block';
-            categoryLabel.style.marginTop = '10px';
+    // Add accessible name using a label
+    const categoryLabel = document.createElement('label');
+    categoryLabel.textContent = 'Select Category';
+    categoryLabel.style.display = 'block';
+    categoryLabel.style.marginTop = '10px';
 
-            const defaultOption = document.createElement('option');
-            defaultOption.textContent = 'Select Category';
-            defaultOption.value = '';
-            defaultOption.disabled = true;
-            defaultOption.selected = true;
-            categorySelect.appendChild(defaultOption);
+    const defaultOption = document.createElement('option');
+    defaultOption.textContent = 'Select Category';
+    defaultOption.value = '';
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    categorySelect.appendChild(defaultOption);
 
-            Object.keys(nominees.other).forEach(category => {
-                // Check if the category has already been added
-                const existingCategories = document.querySelectorAll('.category-select');
-                let alreadyAdded = false;
-                existingCategories.forEach(select => {
-                    if (select.value === category) {
-                        alreadyAdded = true;
-                    }
-                });
-                if (!alreadyAdded) {
-                    const option = document.createElement('option');
-                    option.textContent = category;
-                    option.value = category;
-                    categorySelect.appendChild(option);
-                }
-            });
-
-            // Create nominee select
-            const nomineeSelect = document.createElement('select');
-            nomineeSelect.className = 'nominee-select';
-            nomineeSelect.required = true;
-            nomineeSelect.disabled = true; // Disable until category is selected
-
-            // Add accessible name using a label
-            const nomineeLabel = document.createElement('label');
-            nomineeLabel.textContent = 'Select Nominee';
-            nomineeLabel.style.display = 'block';
-            nomineeLabel.style.marginTop = '10px';
-
-            // Add default option to nominee select
-            const defaultNomineeOption = document.createElement('option');
-            defaultNomineeOption.textContent = 'Select Nominee';
-            defaultNomineeOption.value = '';
-            defaultNomineeOption.disabled = true;
-            defaultNomineeOption.selected = true;
-            nomineeSelect.appendChild(defaultNomineeOption);
-
-            // Append elements to the wrapper div
-            categoryGroupDiv.appendChild(categoryLabel);
-            categoryGroupDiv.appendChild(categorySelect);
-            categoryGroupDiv.appendChild(nomineeLabel);
-            categoryGroupDiv.appendChild(nomineeSelect);
-
-            // Append the wrapper div to the container
-            container.appendChild(categoryGroupDiv);
-
-            // When category is selected, populate nominees
-            categorySelect.addEventListener('change', function () {
-                const selectedCategory = categorySelect.value;
-
-                // Get the nominees for the selected category
-                const nomineesForCategory = nominees.other[selectedCategory] || [];
-
-                // Clear previous options
-                nomineeSelect.innerHTML = '';
-                nomineeSelect.disabled = false;
-
-                // Add default option
-                const defaultNomineeOption = document.createElement('option');
-                defaultNomineeOption.textContent = 'Select Nominee';
-                defaultNomineeOption.value = '';
-                defaultNomineeOption.disabled = true;
-                defaultNomineeOption.selected = true;
-                nomineeSelect.appendChild(defaultNomineeOption);
-
-                // Populate nominee select
-                nomineesForCategory.forEach(nominee => {
-                    const option = document.createElement('option');
-                    option.textContent = nominee;
-                    option.value = nominee;
-                    nomineeSelect.appendChild(option);
-                });
-            });
-        }
-
-        // Generate the prediction card
-        function generateDesign() {
-            const predictions = {
-                actor: document.getElementById('actor').value,
-                actress: document.getElementById('actress').value,
-                director: document.getElementById('director').value,
-                picture: document.getElementById('picture').value,
-                additional: []
-            };
-        
-            // Validate main categories
-            if (!predictions.actor || !predictions.actress || !predictions.director || !predictions.picture) {
-                alert('Please make selections for all main categories.');
-                return;
+    Object.keys(nominees.other).forEach(category => {
+        // Check if the category has already been added
+        const existingCategories = document.querySelectorAll('.category-select');
+        let alreadyAdded = false;
+        existingCategories.forEach(select => {
+            if (select.value === category) {
+                alreadyAdded = true;
             }
-        
-            // Collect additional categories
-            const categoryGroups = document.querySelectorAll('#additionalCategories .category-group');
-            for (let group of categoryGroups) {
-                const categorySelect = group.querySelector('.category-select');
-                const nomineeSelect = group.querySelector('.nominee-select');
-                if (categorySelect.value && nomineeSelect.value) {
-                    predictions.additional.push({
-                        category: categorySelect.value,
-                        choice: nomineeSelect.value
-                    });
-                } else {
-                    alert('Please select both a category and a nominee for all additional categories.');
-                    return;
-                }
-            }
-        
-            // Build output
-            const output = document.getElementById('predictionsGrid');
-            const userName = document.getElementById('userName').value;
-            const title = document.getElementById('predictionTitle');
-            
-            // Set dynamic title
-            title.innerHTML = userName 
-                ? `<span style="color: #00ff00;">${userName.toUpperCase()}'S</span> OSCAR PREDICTIONS` 
-                : "MY OSCAR PREDICTIONS";
-        
-            // Clear previous content
-            output.innerHTML = '';
-        
-            // Add main categories
-            const mainCategories = [
-                { name: 'Actor in a Leading Role', value: predictions.actor },
-                { name: 'Actress in a Leading Role', value: predictions.actress },
-                { name: 'Directing', value: predictions.director },
-                { name: 'Best Picture', value: predictions.picture }
-            ];
-        
-            mainCategories.forEach(cat => {
-                output.innerHTML += `
+        });
+        if (!alreadyAdded) {
+            const option = document.createElement('option');
+            option.textContent = category;
+            option.value = category;
+            categorySelect.appendChild(option);
+        }
+    });
+
+    // Create nominee select
+    const nomineeSelect = document.createElement('select');
+    nomineeSelect.className = 'nominee-select';
+    nomineeSelect.required = true;
+    nomineeSelect.disabled = true; // Disable until category is selected
+
+    // Add accessible name using a label
+    const nomineeLabel = document.createElement('label');
+    nomineeLabel.textContent = 'Select Nominee';
+    nomineeLabel.style.display = 'block';
+    nomineeLabel.style.marginTop = '10px';
+
+    // Add default option to nominee select
+    const defaultNomineeOption = document.createElement('option');
+    defaultNomineeOption.textContent = 'Select Nominee';
+    defaultNomineeOption.value = '';
+    defaultNomineeOption.disabled = true;
+    defaultNomineeOption.selected = true;
+    nomineeSelect.appendChild(defaultNomineeOption);
+
+    // Append elements to the wrapper div
+    categoryGroupDiv.appendChild(categoryLabel);
+    categoryGroupDiv.appendChild(categorySelect);
+    categoryGroupDiv.appendChild(nomineeLabel);
+    categoryGroupDiv.appendChild(nomineeSelect);
+
+    // Append the wrapper div to the container
+    container.appendChild(categoryGroupDiv);
+
+    // When category is selected, populate nominees
+    categorySelect.addEventListener('change', function () {
+        const selectedCategory = categorySelect.value;
+
+        // Get the nominees for the selected category
+        const nomineesForCategory = nominees.other[selectedCategory] || [];
+
+        // Clear previous options
+        nomineeSelect.innerHTML = '';
+        nomineeSelect.disabled = false;
+
+        // Add default option
+        const defaultNomineeOption = document.createElement('option');
+        defaultNomineeOption.textContent = 'Select Nominee';
+        defaultNomineeOption.value = '';
+        defaultNomineeOption.disabled = true;
+        defaultNomineeOption.selected = true;
+        nomineeSelect.appendChild(defaultNomineeOption);
+
+        // Populate nominee select
+        nomineesForCategory.forEach(nominee => {
+            const option = document.createElement('option');
+            option.textContent = nominee;
+            option.value = nominee;
+            nomineeSelect.appendChild(option);
+        });
+    });
+}
+
+// Generate the prediction card
+function generateDesign() {
+    const predictions = {
+        actor: document.getElementById('actor').value,
+        actress: document.getElementById('actress').value,
+        director: document.getElementById('director').value,
+        picture: document.getElementById('picture').value,
+        additional: []
+    };
+
+    // Validate main categories
+    if (!predictions.actor || !predictions.actress || !predictions.director || !predictions.picture) {
+        alert('Please make selections for all main categories.');
+        return;
+    }
+
+    // Collect additional categories
+    const categoryGroups = document.querySelectorAll('#additionalCategories .category-group');
+    for (let group of categoryGroups) {
+        const categorySelect = group.querySelector('.category-select');
+        const nomineeSelect = group.querySelector('.nominee-select');
+        if (categorySelect.value && nomineeSelect.value) {
+            predictions.additional.push({
+                category: categorySelect.value,
+                choice: nomineeSelect.value
+            });
+        } else {
+            alert('Please select both a category and a nominee for all additional categories.');
+            return;
+        }
+    }
+
+    // Build output
+    const output = document.getElementById('predictionsGrid');
+    const userName = document.getElementById('userName').value;
+    const title = document.getElementById('predictionTitle');
+
+    // Set dynamic title
+    // In the generateDesign function, change the title line to:
+    title.innerHTML = userName
+        ? `<span class="user-name">${userName.toUpperCase()}'S</span> OSCAR PREDICTIONS`
+        : "MY OSCAR PREDICTIONS";
+
+    // Clear previous content
+    output.innerHTML = '';
+
+    // Add main categories
+    const mainCategories = [
+        { name: 'Actor in a Leading Role', value: predictions.actor },
+        { name: 'Actress in a Leading Role', value: predictions.actress },
+        { name: 'Directing', value: predictions.director },
+        { name: 'Best Picture', value: predictions.picture }
+    ];
+
+    mainCategories.forEach(cat => {
+        output.innerHTML += `
                     <div class="prediction-item">
                         <div class="category-name">${cat.name}</div>
                         <div class="prediction-value">${cat.value}</div>
                     </div>
                 `;
-            });
-        
-            // Add additional categories
-            predictions.additional.forEach(cat => {
-                output.innerHTML += `
+    });
+
+    // Add additional categories
+    predictions.additional.forEach(cat => {
+        output.innerHTML += `
                     <div class="prediction-item">
                         <div class="category-name">${cat.category}</div>
                         <div class="prediction-value">${cat.choice}</div>
                     </div>
                 `;
-            });
-        
-            // Show the output
-            document.getElementById('formSection').classList.add('hidden');
-            document.getElementById('output').style.display = 'block';
-            window.scrollTo(0, 0);
-        }
+    });
 
-        // Download the prediction card 
-        function downloadCard() {
-            const outputElement = document.getElementById('output');
-            document.querySelectorAll('#output button').forEach(button => button.style.display = 'none');
-            html2canvas(outputElement).then(canvas => {
-                document.querySelectorAll('#output button').forEach(button => button.style.display = '');
-                const link = document.createElement('a');
-                link.download = 'Oscar2025_Predictions.png';
-                link.href = canvas.toDataURL();
-                link.click();
-            });
-        }
+    // Show the output
+    document.getElementById('formSection').classList.add('hidden');
+    document.getElementById('output').style.display = 'block';
+    window.scrollTo(0, 0);
+}
 
-        // Reset the application to start over
-        function startOver() {
-            // Clear selections
-            document.getElementById('actor').value = '';
-            document.getElementById('actress').value = '';
-            document.getElementById('director').value = '';
-            document.getElementById('picture').value = '';
-            document.getElementById('userName').value = '';
+// Download the prediction card 
+function downloadCard() {
+    const outputElement = document.getElementById('output');
+    document.querySelectorAll('#output button').forEach(button => button.style.display = 'none');
+    
+    html2canvas(outputElement, {
+        backgroundColor: '#000000', // Ensure black background
+        scale: 2, // Higher resolution
+        useCORS: true // For loading the award.png
+    }).then(canvas => {
+        document.querySelectorAll('#output button').forEach(button => button.style.display = '');
+        const link = document.createElement('a');
+        link.download = `Oscar2025_Predictions_${Date.now()}.png`;
+        link.href = canvas.toDataURL('image/png', 1.0);
+        link.click();
+    });
+}
 
-            // Remove additional categories
-            document.getElementById('additionalCategories').innerHTML = '';
+// Reset the application to start over
+function startOver() {
+    // Clear selections
+    document.getElementById('actor').value = '';
+    document.getElementById('actress').value = '';
+    document.getElementById('director').value = '';
+    document.getElementById('picture').value = '';
+    document.getElementById('userName').value = '';
 
-            // Hide output and show form
-            document.getElementById('output').style.display = 'none';
-            document.getElementById('formSection').classList.remove('hidden');
+    // Remove additional categories
+    document.getElementById('additionalCategories').innerHTML = '';
 
-            window.scrollTo(0, 0);
-        }
+    // Hide output and show form
+    document.getElementById('output').style.display = 'none';
+    document.getElementById('formSection').classList.remove('hidden');
 
-        // Initialize on load
-        window.onload = initializeCategories;
+    window.scrollTo(0, 0);
+}
+
+// Initialize on load
+window.onload = initializeCategories;

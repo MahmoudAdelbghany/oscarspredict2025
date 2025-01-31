@@ -250,20 +250,18 @@ const nominees = {
                 picture: document.getElementById('picture').value,
                 additional: []
             };
-
+        
             // Validate main categories
             if (!predictions.actor || !predictions.actress || !predictions.director || !predictions.picture) {
                 alert('Please make selections for all main categories.');
                 return;
             }
-
+        
             // Collect additional categories
             const categoryGroups = document.querySelectorAll('#additionalCategories .category-group');
-
             for (let group of categoryGroups) {
                 const categorySelect = group.querySelector('.category-select');
                 const nomineeSelect = group.querySelector('.nominee-select');
-
                 if (categorySelect.value && nomineeSelect.value) {
                     predictions.additional.push({
                         category: categorySelect.value,
@@ -274,26 +272,48 @@ const nominees = {
                     return;
                 }
             }
-
+        
             // Build output
-            const output = document.getElementById('predictionsList');
-            output.innerHTML = `
-                <p><strong>Actor:</strong> ${predictions.actor}</p>
-                <p><strong>Actress:</strong> ${predictions.actress}</p>
-                <p><strong>Director:</strong> ${predictions.director}</p>
-                <p><strong>Best Picture:</strong> ${predictions.picture}</p>
-                ${predictions.additional.map(p => `
-                    <p><strong>${p.category}:</strong> ${p.choice}</p>
-                `).join('')}
-            `;
-
-            // Add user name if provided
+            const output = document.getElementById('predictionsGrid');
             const userName = document.getElementById('userName').value;
-            if (userName) {
-                output.innerHTML += `<p style="text-align: center; margin-top: 20px;">Predicted by: ${userName}</p>`;
-            }
-
-            // Hide the form and show the output
+            const title = document.getElementById('predictionTitle');
+            
+            // Set dynamic title
+            title.innerHTML = userName 
+                ? `<span style="color: #00ff00;">${userName.toUpperCase()}'S</span> OSCAR PREDICTIONS` 
+                : "MY OSCAR PREDICTIONS";
+        
+            // Clear previous content
+            output.innerHTML = '';
+        
+            // Add main categories
+            const mainCategories = [
+                { name: 'Actor in a Leading Role', value: predictions.actor },
+                { name: 'Actress in a Leading Role', value: predictions.actress },
+                { name: 'Directing', value: predictions.director },
+                { name: 'Best Picture', value: predictions.picture }
+            ];
+        
+            mainCategories.forEach(cat => {
+                output.innerHTML += `
+                    <div class="prediction-item">
+                        <div class="category-name">${cat.name}</div>
+                        <div class="prediction-value">${cat.value}</div>
+                    </div>
+                `;
+            });
+        
+            // Add additional categories
+            predictions.additional.forEach(cat => {
+                output.innerHTML += `
+                    <div class="prediction-item">
+                        <div class="category-name">${cat.category}</div>
+                        <div class="prediction-value">${cat.choice}</div>
+                    </div>
+                `;
+            });
+        
+            // Show the output
             document.getElementById('formSection').classList.add('hidden');
             document.getElementById('output').style.display = 'block';
             window.scrollTo(0, 0);

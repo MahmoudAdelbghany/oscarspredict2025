@@ -11,8 +11,19 @@ body {
     padding: 20px;
 }
 
+#userName {
+    max-width: 450px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* .container {
+    max-width: 95%;
+    padding: 15px;
+} */
+
 .container {
-    max-width: 800px;
+    max-width: none;
     margin: 0 auto;
 }
 
@@ -97,6 +108,8 @@ button {
     overflow: hidden;
     border-radius: 12px; 
     border: 2px solid var(--gold);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .oscar-statuette {
@@ -118,18 +131,44 @@ button {
 
 #predictionsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3.5rem;
+    gap: 2rem;
     padding: 1.5rem;
-    margin-top: 1rem;
+    justify-content: center;
 }
 
+/* Default for mobile */
+#predictionsGrid {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+    #predictionsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop+ */
+@media (min-width: 1200px) {
+    #predictionsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Smart columns for download */
+@media (max-width: 767px) {
+    .force-columns {
+        grid-template-columns: repeat(var(--column-count), 1fr) !important;
+    }
+}
 .prediction-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 1rem; /* Added horizontal spacing */
     min-width: 250px;
+    min-height: 120px; /* Fixed height for consistency */
+    justify-content: space-between;
 }
 
 .category-name {
@@ -153,6 +192,10 @@ button {
     box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2);
     margin-top: 0.8rem;
     padding: 15px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .user-name {

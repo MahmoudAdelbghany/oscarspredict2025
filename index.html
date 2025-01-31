@@ -35,11 +35,17 @@
             border-radius: 8px;
         }
 
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
         select, input {
             display: block;
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin: 5px 0 15px 0;
             background: #333;
             color: white;
             border: 1px solid var(--gold);
@@ -83,17 +89,24 @@
         <div id="formSection">
             <div class="category-group">
                 <h2>The Big Four</h2>
+                <label for="actor">Actor in a Leading Role</label>
                 <select id="actor" required>
-                    <option value="">Actor in a Leading Role</option>
+                    <option value="">Select Actor</option>
                 </select>
+
+                <label for="actress">Actress in a Leading Role</label>
                 <select id="actress" required>
-                    <option value="">Actress in a Leading Role</option>
+                    <option value="">Select Actress</option>
                 </select>
+
+                <label for="director">Directing</label>
                 <select id="director" required>
-                    <option value="">Directing</option>
+                    <option value="">Select Director</option>
                 </select>
+
+                <label for="picture">Best Picture</label>
                 <select id="picture" required>
-                    <option value="">Best Picture</option>
+                    <option value="">Select Picture</option>
                 </select>
             </div>
 
@@ -112,13 +125,18 @@
     </div>
 
     <script>
-        
         const nominees = {
             actor: ['Actor 1', 'Actor 2', 'Actor 3', 'Actor 4', 'Actor 5'],
             actress: ['Actress 1', 'Actress 2', 'Actress 3', 'Actress 4', 'Actress 5'],
             director: ['Director 1', 'Director 2', 'Director 3', 'Director 4', 'Director 5'],
             picture: ['Movie 1', 'Movie 2', 'Movie 3', 'Movie 4', 'Movie 5'],
-            other: ['Cinematography', 'Original Screenplay', 'Adapted Screenplay', 'Visual Effects', 'International Feature']
+            other: {
+                'Cinematography': ['Cinematographer 1', 'Cinematographer 2', 'Cinematographer 3'],
+                'Original Screenplay': ['Writer 1', 'Writer 2', 'Writer 3'],
+                'Adapted Screenplay': ['Adapter 1', 'Adapter 2', 'Adapter 3'],
+                'Visual Effects': ['Movie VFX Team 1', 'Movie VFX Team 2', 'Movie VFX Team 3'],
+                'International Feature': ['Film 1', 'Film 2', 'Film 3']
+            }
         };
 
         // Initialize main categories
@@ -128,27 +146,111 @@
                 nominees[category].forEach(nominee => {
                     const option = document.createElement('option');
                     option.textContent = nominee;
+                    option.value = nominee;
                     select.appendChild(option);
                 });
             });
         }
 
-        // Add additional category dropdown
+        // Add additional category dropdowns
         function addCategory() {
             const container = document.getElementById('additionalCategories');
-            const select = document.createElement('select');
-            
+
+            // Create a wrapper div
+            const categoryGroupDiv = document.createElement('div');
+            categoryGroupDiv.className = 'category-group';
+
+            // Create category select
+            const categorySelect = document.createElement('select');
+            categorySelect.className = 'category-select';
+            categorySelect.required = true;
+
+            // Add accessible name using a label
+            const categoryLabel = document.createElement('label');
+            categoryLabel.textContent = 'Select Category';
+            categoryLabel.style.display = 'block';
+            categoryLabel.style.marginTop = '10px';
+
             const defaultOption = document.createElement('option');
             defaultOption.textContent = 'Select Category';
-            select.appendChild(defaultOption);
+            defaultOption.value = '';
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            categorySelect.appendChild(defaultOption);
 
-            nominees.other.forEach(category => {
-                const option = document.createElement('option');
-                option.textContent = category;
-                select.appendChild(option);
+            Object.keys(nominees.other).forEach(category => {
+                // Check if the category has already been added
+                const existingCategories = document.querySelectorAll('.category-select');
+                let alreadyAdded = false;
+                existingCategories.forEach(select => {
+                    if (select.value === category) {
+                        alreadyAdded = true;
+                    }
+                });
+                if (!alreadyAdded) {
+                    const option = document.createElement('option');
+                    option.textContent = category;
+                    option.value = category;
+                    categorySelect.appendChild(option);
+                }
             });
 
-            container.appendChild(select);
+            // Create nominee select
+            const nomineeSelect = document.createElement('select');
+            nomineeSelect.className = 'nominee-select';
+            nomineeSelect.required = true;
+            nomineeSelect.disabled = true; // Disable until category is selected
+
+            // Add accessible name using a label
+            const nomineeLabel = document.createElement('label');
+            nomineeLabel.textContent = 'Select Nominee';
+            nomineeLabel.style.display = 'block';
+            nomineeLabel.style.marginTop = '10px';
+
+            // Add default option to nominee select
+            const defaultNomineeOption = document.createElement('option');
+            defaultNomineeOption.textContent = 'Select Nominee';
+            defaultNomineeOption.value = '';
+            defaultNomineeOption.disabled = true;
+            defaultNomineeOption.selected = true;
+            nomineeSelect.appendChild(defaultNomineeOption);
+
+            // Append elements to the wrapper div
+            categoryGroupDiv.appendChild(categoryLabel);
+            categoryGroupDiv.appendChild(categorySelect);
+            categoryGroupDiv.appendChild(nomineeLabel);
+            categoryGroupDiv.appendChild(nomineeSelect);
+
+            // Append the wrapper div to the container
+            container.appendChild(categoryGroupDiv);
+
+            // When category is selected, populate nominees
+            categorySelect.addEventListener('change', function () {
+                const selectedCategory = categorySelect.value;
+
+                // Get the nominees for the selected category
+                const nomineesForCategory = nominees.other[selectedCategory] || [];
+
+                // Clear previous options
+                nomineeSelect.innerHTML = '';
+                nomineeSelect.disabled = false;
+
+                // Add default option
+                const defaultNomineeOption = document.createElement('option');
+                defaultNomineeOption.textContent = 'Select Nominee';
+                defaultNomineeOption.value = '';
+                defaultNomineeOption.disabled = true;
+                defaultNomineeOption.selected = true;
+                nomineeSelect.appendChild(defaultNomineeOption);
+
+                // Populate nominee select
+                nomineesForCategory.forEach(nominee => {
+                    const option = document.createElement('option');
+                    option.textContent = nominee;
+                    option.value = nominee;
+                    nomineeSelect.appendChild(option);
+                });
+            });
         }
 
         // Generate the prediction card
@@ -161,14 +263,27 @@
                 additional: []
             };
 
+            // Validate main categories
+            if (!predictions.actor || !predictions.actress || !predictions.director || !predictions.picture) {
+                alert('Please make selections for all main categories.');
+                return;
+            }
+
             // Collect additional categories
-            const additionalSelects = document.querySelectorAll('#additionalCategories select');
-            additionalSelects.forEach(select => {
-                if (select.value) {
+            const categoryGroups = document.querySelectorAll('#additionalCategories .category-group');
+
+            categoryGroups.forEach(group => {
+                const categorySelect = group.querySelector('.category-select');
+                const nomineeSelect = group.querySelector('.nominee-select');
+
+                if (categorySelect.value && nomineeSelect.value) {
                     predictions.additional.push({
-                        category: select.options[select.selectedIndex].text,
-                        choice: select.value
+                        category: categorySelect.value,
+                        choice: nomineeSelect.value
                     });
+                } else {
+                    alert('Please select both a category and a nominee for all additional categories.');
+                    return;
                 }
             });
 
